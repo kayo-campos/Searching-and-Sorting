@@ -5,7 +5,7 @@ import timeit
 from Selection_Sort.SelectionSort import selectionSort
 ## Edit line above to include the desired sorting function
 ## OBS - Make sure the folder containing the sorting function
-## has a __init__.py, so python understand it as a package
+## has a __init__.py, so python understands it as a package
 
 
  def drawGraphic(x, y, z, xl="Entradas", yl="Saídas"):
@@ -18,9 +18,11 @@ from Selection_Sort.SelectionSort import selectionSort
 
 def generateRandomList(size):
     random_list = []
-    while len(random_list) < size:
+    actual_length = 0
+    while actual_length < size:
         n = random.randint(1, size)
         random_list.append(n)
+        actual_length += 1
     return random_list
 
 def generateDecreasingList(size):
@@ -39,7 +41,7 @@ def timeToSort(sorting_method, list_generating_method, list_size):
 if __name__ == '__main__':
     ## Edit value of sorting_method so it can be correctly passed
     ## as argument to timeToSort function
-    ## OBS - Make sure you write it the same way as you wrote the
+    ## OBS - Make sure you write exact the same as you wrote the
     ## function name in its package
     sorting_method = "selectionSort"
     numbers_to_generate = [1000, 10000, 20000, 30000, 40000, 50000, 100000]
