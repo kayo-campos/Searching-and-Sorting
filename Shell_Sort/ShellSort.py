@@ -15,7 +15,3 @@ def shellSort(array):
       gap //= 2
   # return operations_count
   return array
-
-
-array = [1,4,6,2,4,6,3,2,2,4,5,6,1,223,3,2,1,24,1,23,12,31,23,1,1]
-print(shellSort(array))
