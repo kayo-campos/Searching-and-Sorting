@@ -3,7 +3,7 @@ import random
 import timeit
 import sys
 
-from Shell_Sort.ShellSort import shellSort
+from Middle_Sort.MiddleSort import middleSort
 ## Edit line above to include the desired sorting function
 ## OBS - Make sure the folder containing the sorting function
 ## has a __init__.py, so python understands it as a package
@@ -47,10 +47,9 @@ if __name__ == '__main__':
     ## OBS - Make sure you write exact the same as you wrote the
     ## function name in its package
     
-    # sorting_method = shellSort
-    sorting_method = "shellSort"
+    sorting_method = "middleSort"
     numbers_to_generate = [1000, 10000, 20000, 30000, 40000, 50000, 100000]
     time_to_generate_medium_case = [countOperations(sorting_method, generateRandomList, size) for size in numbers_to_generate]
     time_to_generate_worst_case = [countOperations(sorting_method, generateDecreasingList, size) for size in numbers_to_generate]
 
-    drawGraphic(numbers_to_generate, time_to_generate_medium_case, time_to_generate_worst_case, "Tamanho do array para ordenar", "Nº de operações")
+    drawGraphic(numbers_to_generate, time_to_generate_medium_case, time_to_generate_worst_case, "Nº de elementos do array", "Tempo (s)")
